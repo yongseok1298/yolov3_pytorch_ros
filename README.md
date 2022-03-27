@@ -1,3 +1,7 @@
+# Fixed error from source
+(+) Fixed rospy.exceptions.ROSSerializationException: field bounding_boxes[].probability must be float type Error
+(+) Fixed from models.models import Darknet ModuleNotFoundError: No module named 'models' Error
+
 # yolov3_pytorch_ros
 
 This package provides a ROS wrapper for [YOLOv3](https://pjreddie.com/darknet/yolo) based on [PyTorch-YOLOv3](https://github.com/eriklindernoren/PyTorch-YOLOv3). For consistency, the [messages](msg) are based on the [darknet_ros](https://github.com/leggedrobotics/darknet_ros) package. The package has been tested with Ubuntu 16.04 and ROS Kinetic on a NVIDIA Jetson TX2.
