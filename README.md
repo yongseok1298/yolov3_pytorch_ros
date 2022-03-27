@@ -1,5 +1,6 @@
 # Fixed error from source
 (+) Fixed rospy.exceptions.ROSSerializationException: field bounding_boxes[].probability must be float type Error
+
 (+) Fixed from models.models import Darknet ModuleNotFoundError: No module named 'models' Error
 
 # yolov3_pytorch_ros
