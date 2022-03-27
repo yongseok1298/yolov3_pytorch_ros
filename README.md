@@ -9,7 +9,7 @@ Ubuntu 20.04
 
 ROS noetic
 
-RTX 3070 TI(raptop)
+RTX 3070 TI(laptop)
 
 CUDA 11.3
 
