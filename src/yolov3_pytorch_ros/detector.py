@@ -2,6 +2,11 @@
 
 from __future__ import division
 
+#ModuleNotFoundError: No module named 'models'
+import sys
+sys.path.insert(0, "/home/kys/catkin_ws/src/yolov3_pytorch_ros/src/yolov3_pytorch_ros/")
+
+
 # Python imports
 import numpy as np
 import scipy.io as sio
@@ -138,10 +143,10 @@ class DetectorManager():
 
                 # Populate darknet message
                 detection_msg = BoundingBox()
-                detection_msg.xmin = xmin_unpad
-                detection_msg.xmax = xmax_unpad
-                detection_msg.ymin = ymin_unpad
-                detection_msg.ymax = ymax_unpad
+                detection_msg.xmin = int(xmin_unpad) # if not int, error
+                detection_msg.xmax = int(xmax_unpad)
+                detection_msg.ymin = int(ymin_unpad)
+                detection_msg.ymax = int(ymax_unpad)
                 detection_msg.probability = conf
                 detection_msg.Class = self.classes[int(det_class)]
 
